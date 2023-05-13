@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macros %}
+
+{% block title %}
+    {{super()}}
+    El Famoso Error : 404
+{% endblock %}
+
+{% block content %}
+    <h1>404: No encontrada en la Navegación</h1>
+    <p>{{ error }}</p>
+    {% endblock %}
