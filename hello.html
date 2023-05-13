@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macros %}
+
+{% block title %}
+    {{super()}}
+    Welcome
+{% endblock %}
+
+{% block content %}
+    {% if user_ip %}
+        <h1>| R-Ingenieria | </h1>
+        
+    {% else %}
+        <a href="{{ url_for('index')}}">Ir a Inicio</a>
+    {% endif %}
+
+    <ul>
+        {% for todo in todos %}
+            {{macros.render_todo(todo)}}
+        {% endfor %}
+    </ul>
+
+    <div class="container2">
+        <h1 class="text-center2">Quien Soy</h1>
+        <p class="text-justify2">Personal y Profesionalmente soy un apasionado por el aprendizaje continuo, asumir mayores retos cada día y aportarle lo mejor de mi a las personas que me rodean y el sector profesional en el que me desempeño
+        </p>
+        <p class="text-justify2">Soy Magister en Ingeniería, Especialista en gestión de sistemas de Potencia, Ingeniero Eléctrico e Ingeniero en Telecomunicaciones con amplia experiencia como Lider de Proyectos, 
+            habilidades en todas las etapas de maduración, planeación, diseño, ejecución e interventoria de proyectos, hasta las fases de comisionamiento, pruebas y puesta en marcha. 
+            Comunicación asertiva para gestionar interesados, con experticia en el control de riesgos, y el manejo de las las dependencias, el flujo óptimo de trabajo integralmente. 
+            Amplios conocimientos en Lenguajes de Programación: Python principalmente, software especializados de electricidad, comunicaciones, automatización industrial avanzada. Ciencia de Datos e Inteligencia Artificial
+        </p>
+    </div>
+
+    <div style="display: flex; justify-content: space-between;">
+        <div>
+            <h2 class="text-center3">Ingeniero Eléctrico</h2>
+          <ul>
+            <li>Dominio de Normas y reglamentos Técnicos: RETIE, NTC 2050, Norma AFINIA S.A. E.S.P., CREG 025/95, Ley 142-143/94, IEEE/ANSI/IEC/UL. </li>
+            <li>Planeación en todas las etapas, desde Desiño hasta comisionamiento y puesta en marcha (FAT/SAT/PES) de equipos y Sistemas de potencia, líneas de transmisión y subestaciones Alta Tensión EAT/AT/MT/BT. 
+            <li>Especialista en diseño e Implementación de Sistemas de comunicaciones para 
+                subestaciones AT, Telecontrol y Sistemas SCADA en sus variantes 
+                </li>
+            <li>Gestor de activos y experto en mantenimiento eléctrico RCA/RCM PASS-55/ISO 55000 </li>
+            <li>Experto en Calidad De La Energía y soluciones tipo FACTS PSS/POD/GOV/SVC/STATCOM </li>
+            <li>Implementaciones de sistemas con fuentes de energías alternativas y/o renovables. </li>
+            <li>Conocimientos específicos en máquinas, variadores de velocidad, y plantas 
+                Industriales
+                </li>
+            <li>Analista de mercados de energía para optimizar transacciones energéticas desde la 
+                generación o consumo. 
+                </li>    
+            <li>Experiencias Destacadas en Sistemas de respaldo en DC </li>  
+            <li>Coordinación de Protecciones eléctricas - Software Digsilent, NEPLAN y ETAP. </li>  
+            <li>Diseñador de sistemas de puesta a tierra- experiencia en desarrollo de equipo de 
+                prospección Geoeléctrica (creación innovadora implementada y propia) 
+                </li>  
+            <li></li>  
+        
+        </ul>
+        </div>
+        <div>
+            <h2 class="text-center3">Ingeniero En Telecomunicaciones</h2>
+          <ul>
+            <li>Especialidad Profesional en el area de la Automatización y Control Industrial Avanzada, de última tecnologia y aplicando como base las ciencias tecnologicas y la modelación matematica aplicada</li>
+            <li>Desarrollo de Aplicaciones de Ciencia de Datos e Inteligencia Artificial, Redes neuronales en Keras y TensorFlow 2.0, dominio Pandas, Numpy, Sympy, Sckit-Learn</li>
+            <li>Desarrollo Frontend, Backend, Bases de Datos SQL, Flask, NGINEX, DOCKER, Google Plattform GCP</li>
+            <li>Experto en redes y ciencia de las telemáticas, direccionamiento, enrutamiento, tecnologías 
+                LAN/WAN, redes móviles 2G/3G/4G y sistemas avanzados de conmutación 
+                PDH/SDH/xWDM 
+                </li>
+            <li>Especialidad en Comunicación de subestaciones y buses industriales G.703.1/.6, 
+                PROFIBUS/MODBUS/ETHERNET-IP/IEC-61850/ IEC 60870-5-101/104. 
+                </li>
+            <li>Capacitado para la instalación de todo tipo de servidores Microsoft y también en GNU/Linux </li>
+            <li>Diseñador de controles industriales PID y Sistemas SCADA, especialmente en 
+                Wonderwore System Platform Archestra, Intouch, Galaxy Repository, Historian 
+                </li>
+            <li>Interprete planos PI&D para procesos industriales para evaluar planes de optimización. </li>
+            <li>Diseñador de circuitos digitales avanzados a través de uC's, DSP, PLC’s, CPLD’s y FPGA’s </li>
+            </ul>
+        </div>
+      </div>
+    
+      <div class="container2">
+        <h1 class="text-center2">Experiencia Profesional</h1>
+        <h3 class="text-center2">Coordinador de Redes</h3>
+        <p class="text-justify2">Coordinación Técnica y apoyo integral a otras dependencias, como la juridica y ambiental para el avance y cumplimiento de objetivos del Proyecto de Infraestructura de interés nacional y/o internacional.
+            Gestor de las acciones para que las cosas pasen, de forma metodologica en reuniones con las entidades externas operadores de redes, para las definiciones técnicas pertinentes y necesarias para el desarrollo del proyecto. 
+        </p>
+        <h3 class="text-center2">Especialista Grado Superior de Proyectos</h3>
+        <p class="text-justify2">Lider del Proyecto PTAP El Cerro: La Planta que abastece el servicio de Agua Potable a la Cartagena de 2 Millones de Habitantes.  
+        </p>
+        
+    </div>
+
+    <section class="container2" id="contacto">
+        <h2>Datos de Contacto</h2>
+        <p>Telefono: (+57) 3155127362</p>
+        <p>email: rafaelnotty@gmail.com</p>
+        <p>Linkedin: www.linkedin.com/in/rafaelnotty</p>
+        <p>WebSite: https://rafaelnotty.github.io/mycvpage/</p>
+      </section>
+
+    {% endblock %}
+  
