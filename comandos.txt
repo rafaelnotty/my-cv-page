@@ -1,2 +1,28 @@
-flask
-flask-bootstrap
+#PREPARACION DE ENTORNO
+pip install -r requirements.txt
+
+#COMANDOS Github
+git add .
+git commit -m "Mensaje del commit"
+git push
+
+#COMANDOS PYTHON
+# instalar flask en el espacio dev o env
+
+pip install flask
+
+#crear variable de ambiente para indicarle al ambiente donde esta mi archivo a ejecutar al arrancar el servidor flask
+
+#Para verificar que existe
+export FLASK_APP=main.py
+echo $FLASK_APP
+
+#RUN flask - iniciar servidor flask
+flask run
+
+#Encender el modo debug, creando otra variable 
+export FLASK_DEBUG=1
+echo $FLASK_DEBUG
+
+#Desechados del desarrollo
+<h5>IP Detectada: {{user_ip}}</h1> #anteriormente ubicado en el if p_user
